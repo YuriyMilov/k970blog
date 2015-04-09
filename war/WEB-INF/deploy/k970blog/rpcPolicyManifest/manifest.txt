@@ -1,0 +1,3 @@
+# Module k970blog
+# RPC service class, partial path of RPC policy file
+kk.client.GreetingService, 8FDCDB26468D59C5BBD797997D79ACA3.gwt.rpc

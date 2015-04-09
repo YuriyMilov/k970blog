@@ -1,0 +1,2 @@
+serviceClass: kk.client.GreetingService
+path: 8FDCDB26468D59C5BBD797997D79ACA3.gwt.rpc

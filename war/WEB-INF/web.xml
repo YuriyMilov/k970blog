@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  
+  
+   
+  <servlet>
+    <servlet-name>gm3start</servlet-name>
+    <servlet-class>kk.gm3start</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>gm3start</servlet-name>
+    <url-pattern>/gm3start</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>gm3</servlet-name>
+  <servlet-class>kk.gm3</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>gm3</servlet-name>
+  <url-pattern>/_ah/mail/1@k970blog.appspotmail.com</url-pattern>
+</servlet-mapping>
+
+
+  
+    
+  <servlet>
+    <servlet-name>scroll</servlet-name>
+    <servlet-class>kk.scroll</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>scroll</servlet-name>
+    <url-pattern>/pages/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>start</servlet-name>
+    <servlet-class>kk.start</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>start</servlet-name>
+    <url-pattern>/start</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+<servlet>
+  <servlet-name>gm</servlet-name>
+  <servlet-class>kk.gm</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>gm</servlet-name>
+  <url-pattern>/_ah/mail/gm@k970blog.appspotmail.com</url-pattern>
+</servlet-mapping>
+
+
+
+    
+<servlet>
+  <servlet-name>gm1</servlet-name>
+  <servlet-class>kk.gm1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>gm1</servlet-name>
+  <url-pattern>/_ah/mail/gm1@k970blog.appspotmail.com</url-pattern>
+</servlet-mapping>
+
+
+
+
+<servlet>
+  <servlet-name>gm2</servlet-name>
+  <servlet-class>kk.gm2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>gm2</servlet-name>
+  <url-pattern>/_ah/mail/gm2@k970blog.appspotmail.com</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>kk.gif</servlet-name>
+  <servlet-class>kk.gif</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>kk.gif</servlet-name>
+  <url-pattern>/kk.gif</url-pattern>
+</servlet-mapping>
+
+   
+<servlet>
+  <servlet-name>bup</servlet-name>
+  <servlet-class>kk.bup</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>bup</servlet-name>
+  <url-pattern>/bup</url-pattern>
+</servlet-mapping>
+
+      
+  <servlet>
+    <servlet-name>fed</servlet-name>
+    <servlet-class>kk.fed</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>fed</servlet-name>
+    <url-pattern>/fed</url-pattern>
+  </servlet-mapping>
+   
+   
+  
+  
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>kk.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/k970blog/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>start</welcome-file>
+  </welcome-file-list>
+
+</web-app>
