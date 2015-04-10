@@ -15,8 +15,7 @@ public class start extends HttpServlet {
 		String sh = req.getScheme() + "://" + req.getServerName() + ":"
 				+ req.getServerPort() + req.getContextPath();
 
-		String s = st.rfu_utf(sh+"/googapix.htm");		
-		s = s.replace("<!-- qqq -->", st.rfu_utf(sh+"/fed?_info.viz"));		
+		String s = "<link rel=\"stylesheet\" href=\""+sh+"/css/style.css\" />"+st.rfu_utf(sh+"/fed?_info.viz");		
 
 		PrintWriter writer = resp.getWriter();
 		writer.write(s);

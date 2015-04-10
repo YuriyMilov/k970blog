@@ -39,6 +39,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
@@ -53,8 +55,35 @@ import java.nio.charset.Charset;
 
 public class st {
 
-	public static String googa ="<script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-50731413-2', 'auto');  ga('send', 'pageview');</script>";
 
+	public static String parjs(String s) {
+
+		Document doc = Jsoup.parse(s);
+		Element qq1 = doc.getElementsByTag("div").first();
+		String s1 = qq1.html();
+
+		Document doc2 = Jsoup.parse(s1);
+		Element qq2 = doc2.getElementsByTag("table").last();
+		String s2 = "";
+		if (qq2 != null)
+			s2 = qq2.html();
+
+		Document doc3 = Jsoup.parse(s2);
+		Element qq3 = doc3.getElementsByTag("div").last();
+
+		String s3 = "";
+		if (qq3 != null) {
+			s3 = qq3.html();
+
+			if (s3.indexOf("<a ") > -1) {
+				s3 = "<table><tr><td width=336px>" + s3 + "</td></tr></table>";
+				s3 = s3.replace("<a href=", "<a target='_blank' href=");
+			}
+			else s3="";
+		}
+		return s3;
+
+	}
 	
 	public static String get_first(String s, String s1, String s2) {
 		int i1 = s.indexOf(s1);

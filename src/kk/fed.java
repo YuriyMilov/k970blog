@@ -38,8 +38,8 @@ public class fed extends HttpServlet {
 			s = _info.gm1;
 		else if (s.equals("_info.gm2"))
 			s = _info.gm2;
-		else if (s.equals("_info.gm3"))
-			s = _info.gm3;
+		else if (s.equals("_info.gm3"))			
+			s=st.rfu_utf(sh+"/adv_sport.txt")+ _info.gm3;			
 		else if (s.equals("_info.viz"))
 			s = _info.viz;
 
